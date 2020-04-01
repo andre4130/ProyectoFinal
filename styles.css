@@ -1,0 +1,185 @@
+/*this is the css stylesheet*/
+/* html, body { */
+	/* background-image: linear-gradient(black, white); */
+	/* margin: 0; */
+
+
+html, body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.raleway{
+  font-family:'Raleway', sans-serif;
+}
+.headerheight{
+  width: 100%;
+  height: 500px;
+  font-family: 'Raleway';
+  background-size: cover;
+  background-position: top;
+}
+
+.fit-image{
+	width: 100%;
+object-fit: cover;
+height: 500px;
+}
+
+.headerheight{
+  width: 100%;
+  height: 500px;
+}
+
+a {
+  color: black;
+  font-family: 'poppins'; sans-serif;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+a:hover{
+  text-decoration: none;
+  color: black;
+  animation-name: font-color;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+  /* color:#17a2b8; */
+  font
+}
+
+button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes background-color {
+  100% {
+    background-color: #17a2b8;
+  }
+}
+
+@keyframes font-color {
+  100% {
+  color: #17a2b8;
+  font-weight: bold;
+  transform: scale(1.05);
+  opacity: 1;
+  }
+}
+.center{
+  text-align: center;
+}
+
+.top{
+  top: 15px;
+}
+
+.container-nav {
+  margin-top:18px;
+  width: 100%;
+  left:0px;
+  /* top: 0px; */
+  margin:auto;
+  background-color: #6c757d;
+  z-index: 3;
+}
+
+.container{
+  max-width: 960px;
+
+}
+.container-header{
+  max-width: 920px;
+  margin:30px auto 0 auto;
+  padding: 0px;
+}
+.container-search{
+  max-width: 950px;
+  margin:0 auto 0 auto;
+  padding: 0px;
+}
+.search{
+  color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.searchicon{
+  content:f002;
+}
+
+.lh-condensed { line-height: 1.25; }
+/* .navbar {
+overflow: hidden;
+position: fixed; /* Set the navbar to fixed position */
+top: 0; /* Position the navbar at the top of the page */
+width: 100%; /* Full width */
+/* background-color: #FFF; */ */
+}
+
+/* Specific CSS for form */
+
+.form-control:focus{border-color: #17a2b8;  box-shadow: none; -webkit-box-shadow: none;}
+
+.bootstrap-iso .form-control:focus{border-color: #17a2b8;  box-shadow: none; -webkit-box-shadow: none;}
+.bootstrap-iso .has-error .form-control:focus{border-color: #17a2b8; box-shadow: none; -webkit-box-shadow: none;}
+
+
+/* // Readonly controls as plain text
+//
+// Apply class to a readonly input to make it appear like regular plain
+// text (without any border, background color, focus indicator) */
+
+.form-control-plaintext {
+  display: block;
+  width: 100%;
+  padding: $input-padding-y 0;
+  margin-bottom: 0; // match inputs if this class comes on inputs with default margins
+  @include font-size($input-font-size);
+  line-height: $input-line-height;
+  color: $input-plaintext-color;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: $input-border-width 0;
+
+  &.form-control-sm,
+  &.form-control-lg {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+/* // Form control sizing
+//
+// Build on .form-control with modifier classes to decrease or increase the
+// height and font-size of form controls.
+//
+// Repeated in `_input_group.scss` to avoid Sass extend issues. */
+
+.form-control-sm {
+  height: $input-height-sm;
+  padding: $input-padding-y-sm $input-padding-x-sm;
+  @include font-size($input-font-size-sm);
+  line-height: $input-line-height-sm;
+  @include border-radius($input-border-radius-sm);
+}
+
+.form-control-lg {
+  height: $input-height-lg;
+  padding: $input-padding-y-lg $input-padding-x-lg;
+  @include font-size($input-font-size-lg);
+  line-height: $input-line-height-lg;
+  @include border-radius($input-border-radius-lg);
+}
+
+/* // stylelint-disable-next-line no-duplicate-selectors */
+select.form-control {
+  &[size],
+  &[multiple] {
+    height: auto;
+  }
+}
+
+textarea.form-control {
+  height: auto;
+}

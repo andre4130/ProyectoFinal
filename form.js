@@ -130,12 +130,14 @@ function formValidation(){
     zipError.innerHTML = "";
   }
 
+  if (document.getElementById("conditions-info").checked==false){
+    errorAcumulado ++;
+  }
+
   // en el caso de que uno de los campos sea obligatorio y no esté bien rellenado, se inhabilita el boton de Submit
 
-  if (errorAcumulado == 0 && document.getElementById("conditions-info").checked==true) {
+  if (errorAcumulado == 0) {
     document.getElementById("submit").removeAttribute("disabled");
-    // } else if (check != null) {
-    //   bt.disabled = false;
   } else {
     document.getElementById("submit").setAttribute("disabled","");
     console.log(errorAcumulado);
